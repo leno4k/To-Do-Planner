@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+p {
+    border: 4px dotted rgba(255, 255, 249, 0.87);
+    background-color: rgba(253, 135, 135, 0.637);
+    width: 20%;
+    margin: 10px auto; 
+    text-align: center
+}

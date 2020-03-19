@@ -1,0 +1,64 @@
+<head>
+    <title>TOO.DOO</title>
+    <link rel='stylesheet' href={{ url_for('static', filename='style.css')}}>
+    <link rel='stylesheet' href={{ url_for('static', filename='user.css')}}>
+</head>
+
+<h1>TODO LIST</h1>
+
+{% if session['human'] != username %}
+<p>Something went wrong. Get out of here !</p>
+<a href={{ url_for('login') }} > To Sing IN </a>
+<br> 
+<a href={{ url_for('index') }} > To Sing UP </a>
+
+{% else %}
+
+
+<h2>Hello, <b>{{ username|title }}</b> !</h2>
+
+<div class="wrapper">
+{% for task in tasks %}
+<div class="card">
+    <div class="card-img"></div>
+    <p class="card-heading">{{ task[2] }}</p>
+    <p class="card-content">{{ task[3] }}</p>
+    <p class="card-start">Created on: {{ task[4] }}</p>
+    {% if task[5] %}
+    <p class="card-end">Deadline: {{ task[5] }}</p>
+    {% endif %}
+    <a href={{ '/delete/' + loop.index|string }}>Remove</a> 
+</div>    
+{% endfor %}
+</div>
+
+
+
+<form method="POST"> 
+    <h3>ADD YOUR TASK</h3>
+    <div>
+        <lable>Title</lable>
+        <input type="text" 
+               minlength="2" 
+               maxlength="30"
+               placeholder="What do you need to do?(2-30 symbol)"
+               name="title" required> 
+    </div>  
+    <div>
+        <lable>Description</lable>
+        <input type="text" 
+               name="content"
+               placeholder="How do you need to do this?">
+    </div>  
+    <div>
+        <lable>Deadline</lable>
+        <input type="date" 
+               name="end_date">
+    </div>
+        <input type="submit" 
+               value="Add Task">
+</form>
+
+
+<a href={{ url_for('login') }}>Log Out</a>
+{% endif %}

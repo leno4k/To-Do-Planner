@@ -1,0 +1,119 @@
+body {
+    background: url(https://www.feelingsensaishanal.com/wp-content/uploads/2017/10/glitter-1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+form {
+    background-color: rgba(250, 190, 190, 0.829);
+    width: 20%;
+    margin: 10px auto;
+}
+
+p {
+    color: white;
+    text-shadow: 0 0 1px black;
+    border: 4px dotted rgba(255, 255, 249, 0.87);
+    background-color: rgba(253, 135, 135, 0.637);
+    width: 20%;
+    margin: 10px auto; 
+    text-align: center
+}
+
+h3 {
+    
+    margin: 10px;
+    color: white;
+    text-shadow: 0 0 5px black;
+    text-align: center
+}
+
+h2 {
+    margin-bottom: 3px ;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 3px black;
+}
+
+a{
+    text-align: center
+}
+
+div.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    background: rgba(255, 117, 170, 0.808);
+    border: 4px ridge rgb(252, 158, 158);
+    margin: 5px;
+    box-shadow: 2px 4px black
+}
+
+div.card:hover {
+    transform: scale(1.01)
+}
+
+div.card-img {
+    height: 125px;
+    background: url(https://i.ytimg.com/vi/jpsGLsaZKS0/maxresdefault.jpg);
+    background-size: cover;
+    background-position: centre
+}
+
+div.card p {
+    border: 1px dotted white;
+    width: 92%
+}
+
+p.card-heading {
+    text-transform: uppercase;
+}
+
+p.card-start, p.card-end {
+    font-size: 0.7rem
+}
+
+div.card a{
+    display: block;
+    text-align: center;
+    color: rgb(158, 16, 16);
+    padding: 8px;
+}
+
+div.card a:visited { 
+    text-decoration: none;
+    color: black;
+    } 
+div.card a:active { 
+    text-decoration: none;
+    color: black;
+    }
+div.card a:hover {
+    text-decoration: underline;
+    color:  rgb(156, 1, 1);
+   }
+
+div.wrapper {
+    display: flex;
+    width: 50%;
+    margin: 10px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20 px;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+    } 
+a:active { 
+    text-decoration: none;
+    color: black;
+    }
+a:hover {
+    text-decoration: underline;
+    color:  rgb(104, 12, 12);
+   }

@@ -1,0 +1,42 @@
+<head>
+    <title>TOO.DOO</title>
+    <link rel='stylesheet' href={{ url_for('static', filename='style.css')}}>
+    <link rel='stylesheet' href={{ url_for('static', filename='login.css')}}>
+</head>
+
+
+<h1>TODO LIST</h1>
+<h2>LOG IN</h2>
+
+{% if error %}
+<p>Sorry, seems like you don't have account :c</p>
+{% endif %}
+
+
+
+<form method="POST"> 
+    <div>
+        <label>Email</label>
+        <input type="email" 
+               minlength="6" 
+               placeholder="Here is a place for your email :)" 
+               name="email" required> 
+    </div>  
+    <div>
+        <label>Password</label>
+        <input type="password" 
+               minlength="6"
+               placeholder="Do you remember your password?" 
+               name="password" required>
+    </div>  
+    <div id="remember">
+        <label>Remember Me</label>
+        <input type="checkbox" 
+               name="remember">
+    </div>
+    <input type="submit" 
+           value="Log In!">
+    <a href={{ url_for('index') }}>Sign In</a>
+</form>
+
+

@@ -1,0 +1,52 @@
+<head>
+    <title>TOO.DOO</title>
+    <link rel='stylesheet' href={{ url_for('static', filename='style.css')}}>
+    <link rel='stylesheet' href={{ url_for('static', filename='index.css')}}>
+</head>
+
+
+
+<h1>TODO LIST</h1>
+
+
+{% if error == "already_exists" %}
+<p>Sorry, seems like account linked to this email already exists</p>
+{% elif error == "different_passwords" %}
+<p>Sorry, seems like passwords don't match</p>
+{% endif %}
+
+<form method="POST">
+    <div>
+        <label>Name</label>
+        <input minlength="2" 
+               name="name" required
+               placeholder="How would you like us to address you?">
+    </div>  
+    <div>
+        <label>Email</label>
+        <input type="email" 
+               minlength="6" 
+               placeholder="We need your valid email" 
+               name="email" required> 
+    </div>  
+    <div>
+        <label>Password</label>
+        <input type="password" 
+               minlength="6" 
+               placeholder="6+ symbols, please )" 
+               name="password" required>
+    </div>  
+    <div>
+        <label>Password</label>
+        <input type="password" 
+               placeholder="Repeat, pleease :)" 
+               name="check_password" required>
+    </div>   
+     
+    <input type="submit" value="Send!">
+
+    <a href={{ url_for('login') }}>Already have account</a>
+
+</form>
+
+
